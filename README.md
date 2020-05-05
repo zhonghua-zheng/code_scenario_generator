@@ -1,5 +1,6 @@
 PartMC Scenario Generator
 =================
+[![DOI](https://zenodo.org/badge/261375515.svg)](https://zenodo.org/badge/latestdoi/261375515)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
