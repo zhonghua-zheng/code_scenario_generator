@@ -56,10 +56,10 @@ You may follow the [instruction](http://lagrange.mechse.illinois.edu/partmc/part
 | **w/o dust** | case_3     | case_4       |
 
 ### How to develop the cases?
-***w/o sea salt***
-1.modify "1_create_LHS_matrix" (RH_min, RH_max, Latitude_min, Latitude_max, and **ss** relevant copies)
-2.modify "gas_back.dat"
-3.modify "2_modify_dat_spec.py"  
+***w/o sea salt***   
+1.modify "1_create_LHS_matrix" (RH_min, RH_max, Latitude_min, Latitude_max, and **ss** relevant copies)    
+2.modify "gas_back.dat"     
+3.modify "2_modify_dat_spec.py"      
 ```python
 # assume there are no sea salt and DMS
 util.modify_aero_emit_dist(directory, matrix, ss_option=None, dust_option=True)
@@ -76,10 +76,9 @@ util.modify_gas_emit(directory, matrix, DMS_option=None))
 | **DMS concentration (ppb)** (gas_back.dat)  |5.0E-01 |  No                         |
 | **DMS emissions (mol m^{-2} s^{-1})** (gas_emit.dat)  |3.756E-11 |  No             |
 
-***w/o dust***
-1.modify "1_create_LHS_matrix" (RH_min, RH_max, Latitude_min, Latitude_max, and **dust** relevant copies)
-2.modify "2_modify_dat_spec.py"  
-
+***w/o dust***   
+1.modify "1_create_LHS_matrix" (RH_min, RH_max, Latitude_min, Latitude_max, and **dust** relevant copies)      
+2.modify "2_modify_dat_spec.py"    
 ```python
 # assume there are no dust, but sea salt
 util.modify_aero_emit_dist(directory, matrix, ss_option=True, dust_option=None)
