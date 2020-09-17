@@ -87,18 +87,18 @@ def modify_aero_emit_dist(directory, matrix, ss_option, dust_option):
     flist=f.readlines()
     
     # carbo
-    flist[4] = "num_conc " + "{:.4}".format(matrix[23]) + "                     # particle number density (#/m^3)\n"
+    flist[4] = "num_conc " + "{:.4}".format(matrix[23]) + "                     # particle number density (#/m^2)\n"
     flist[5] = "geom_mean_diam " + "{:.4}".format(matrix[21]) + "                # geometric mean diameter (m)\n"
     flist[6] = "log10_geom_std_dev " + "{:.4}".format(math.log10(matrix[22])) + "           # log_10 of geometric std dev of diameter\n"
     
     if ss_option != None:
         # ss1
-        flist[12] = "num_conc " + "{:.4}".format(matrix[27]) + "                     # particle number density (#/m^3)\n"
+        flist[12] = "num_conc " + "{:.4}".format(matrix[27]) + "                     # particle number density (#/m^2)\n"
         flist[13] = "geom_mean_diam " + "{:.4}".format(matrix[25]) + "                # geometric mean diameter (m)\n"
         flist[14] = "log10_geom_std_dev " + "{:.4}".format(math.log10(matrix[26])) + "           # log_10 of geometric std dev of diameter\n"
         
         # ss2
-        flist[20] = "num_conc " + "{:.4}".format(matrix[31]) + "                     # particle number density (#/m^3)\n"
+        flist[20] = "num_conc " + "{:.4}".format(matrix[31]) + "                     # particle number density (#/m^2)\n"
         flist[21] = "geom_mean_diam " + "{:.4}".format(matrix[29]) + "                # geometric mean diameter (m)\n"
         flist[22] = "log10_geom_std_dev " + "{:.4}".format(math.log10(matrix[30])) + "           # log_10 of geometric std dev of diameter\n"
     else:
@@ -107,12 +107,12 @@ def modify_aero_emit_dist(directory, matrix, ss_option, dust_option):
     
     if dust_option != None:
         # dust1
-        flist[28] = "num_conc " + "{:.4}".format(matrix[35]) + "                     # particle number density (#/m^3)\n"
+        flist[28] = "num_conc " + "{:.4}".format(matrix[35]) + "                     # particle number density (#/m^2)\n"
         flist[29] = "geom_mean_diam " + "{:.4}".format(matrix[33]) + "                # geometric mean diameter (m)\n"
         flist[30] = "log10_geom_std_dev " + "{:.4}".format(math.log10(matrix[34])) + "           # log_10 of geometric std dev of diameter\n"
         
         # dust2
-        flist[36] = "num_conc " + "{:.4}".format(matrix[38]) + "                     # particle number density (#/m^3)\n"
+        flist[36] = "num_conc " + "{:.4}".format(matrix[38]) + "                     # particle number density (#/m^2)\n"
         flist[37] = "geom_mean_diam " + "{:.4}".format(matrix[36]) + "                # geometric mean diameter (m)\n"
         flist[38] = "log10_geom_std_dev " + "{:.4}".format(math.log10(matrix[37])) + "           # log_10 of geometric std dev of diameter\n"
     else:
