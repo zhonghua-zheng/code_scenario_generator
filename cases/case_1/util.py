@@ -63,7 +63,7 @@ def modify_aero_emit_comp_ss1(directory, matrix):
     flist[1] = "OC              " + "{:.4}".format(matrix[28]) + "\n"
     flist[2] = "Na              " + "{:.4}".format((1-matrix[28])*0.3856) + "\n"
     flist[3] = "Cl              " + "{:.4}".format((1-matrix[28])*0.5389) + "\n"
-    flist[3] = "SO4             " + "{:.4}".format((1-matrix[28])*0.0755) + "\n"
+    flist[4] = "SO4             " + "{:.4}".format((1-matrix[28])*0.0755) + "\n"
     f=open(directory+"/aero_emit_comp_ss1.dat", "w+")
     f.writelines(flist)
     f.close()
@@ -76,7 +76,7 @@ def modify_aero_emit_comp_ss2(directory, matrix):
     flist[1] = "OC              " + "{:.4}".format(matrix[32]) + "\n"
     flist[2] = "Na              " + "{:.4}".format((1-matrix[32])*0.3856) + "\n"
     flist[3] = "Cl              " + "{:.4}".format((1-matrix[32])*0.5389) + "\n"
-    flist[3] = "SO4             " + "{:.4}".format((1-matrix[32])*0.0755) + "\n"
+    flist[4] = "SO4             " + "{:.4}".format((1-matrix[32])*0.0755) + "\n"
     f=open(directory+"/aero_emit_comp_ss2.dat", "w+")
     f.writelines(flist)
     f.close()
